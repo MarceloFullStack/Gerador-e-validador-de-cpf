@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="a">
+                <div class="configurar">
+                    <span class="tipo-config">Padrão</span>
+                    <select id="formatacao" name="formato"
+                        onclick="gtag('event','click',{'event_category':'app','event_label':'formatoCPF','value':1});">
+                        <option value="padrao" selected="selected">xxx.xxx.xxx-xx</option>
+                        <option value="digits">xxxxxxxxxxx</option>
+                        <option value="checker">xxxxxxxxx-xx</option>
+                    </select>
+                </div>
+                <div class="configurar">
+                    <span class="tipo-config">Origem</span>
+                    <select id="origem" name="origem"
+                        onclick="gtag('event','click',{'event_category':'app','event_label':'origemCPF','value':1});">
+                        <option value="none" selected="selected">Aleatório</option>
+                        <option value="2">AC</option>
+                        <option value="4">AL</option>
+                        <option value="2">AM</option>
+                        <option value="2">AP</option>
+                        <option value="5">BA</option>
+                        <option value="3">CE</option>
+                        <option value="1">DF</option>
+                        <option value="7">ES</option>
+                        <option value="1">GO</option>
+                        <option value="3">MA</option>
+                        <option value="6">MG</option>
+                        <option value="1">MS</option>
+                        <option value="1">MT</option>
+                        <option value="2">PA</option>
+                        <option value="4">PB</option>
+                        <option value="4">PE</option>
+                        <option value="3">PI</option>
+                        <option value="9">PR</option>
+                        <option value="7">RJ</option>
+                        <option value="4">RN</option>
+                        <option value="2">RO</option>
+                        <option value="2">RR</option>
+                        <option value="0">RS</option>
+                        <option value="9">SC</option>
+                        <option value="5">SE</option>
+                        <option value="8">SP</option>
+                        <option value="1">TO</option>
+                    </select>
+                </div>
+                <div class="configurar">
+                    <span class="tipo-config">Quant.</span>
+                    <input id="quantidade" class="quantidade" type="text" value="1"
+                        onclick="gtag('event','click',{'event_category':'app','event_label':'quantCPF','value':1});">
+                </div>
+            </div>
+            <div class="d">
+                <button class="generator" id="btn-gerar-CPF">Gerar CPF</button>
+                <button class="generator" id="btn-validar-CPF">Validar CPF</button>
+                <button class="generator" id="btn-copiar">Copiar</button>
+            </div>
+            <div class="e">
+                <textarea id="cpf-gerado" class="resultado" name="resultado" cols="40" rows="5"></textarea>
+            </div>
+            <div class="f">Gerador e validador de CPF</div>
+            <div class="g">
+            </div>
+        </div>
+
+        </script>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
